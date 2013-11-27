@@ -5,12 +5,12 @@
     if (isbad(jq.length)) {
       if (cb) {
         if (jQuery.isFunction(cb)) {
-          cb(jq.selector, jq);
+          cb(jq.selector, nm, jq);
         } else {
-          alert(cb);
+          console.log(cb);
         }
       } else {
-        alert(jq.selector + " " + nm + " failure");
+        console.log(jq.selector + " " + nm + " failure");
       }
     }
     return jq;
