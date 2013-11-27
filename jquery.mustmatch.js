@@ -5,7 +5,7 @@
     if (isbad(jq.length)) {
       if (cb) {
         if (jQuery.isFunction(cb)) {
-          cb(jq.selector, nm, jq);
+          cb(jq.selector, jq);
         } else {
           console.log(cb);
         }
