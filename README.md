@@ -26,4 +26,9 @@ Overriding Validation Error Handling
 ====================================
 By default, validation failures will write to the JavaScript console.
 
-Override by
+Override by providing a callback
+
+$(".someclass").mm(function(sel, jq) {
+  alert(sel + " did not match any DOM nodes");
+});
+
