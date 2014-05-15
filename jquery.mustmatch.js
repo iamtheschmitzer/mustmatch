@@ -19,6 +19,6 @@
     return must(this, function(sz){return sz===0;}, "mustmatch", cb);
   };
   jQuery.fn.mi = jQuery.fn.mustidentify = function(cb) {
-    return must(this, function(sz){return sz!== 1;}, "mustmatch", cb);
+    return must(this, function(sz){return sz!== 1;}, "mustidentify", cb);
   };
 }(jQuery));
