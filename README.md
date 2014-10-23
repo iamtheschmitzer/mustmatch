@@ -1,5 +1,5 @@
-jQuerymustmatch plugin
-======================
+jQuery Mustmatch Plugin
+=======================
 
 jquery plugin to detect errors in matching jQuery selectors in a minimal library.  Two validations are available:
 
