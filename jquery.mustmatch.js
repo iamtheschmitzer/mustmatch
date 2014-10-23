@@ -1,5 +1,5 @@
 /*jslint white: false */
-/*global jQuery, alert */
+/*global $, jQuery, console */
 // Immediate method has named parameter - will not conflict
 (function($){
   // The implementation - pass the jQuery object, the test for badness, label,
@@ -10,13 +10,12 @@
         if (jQuery.isFunction(cb)) {
           cb(jq.selector, jq);
         } else {
-          console.log(cb);
+          // Call default callback
+          $.mustmatch.defaults.callback(jq, cb);
         }
       } else {
        // Call default callback
        $.mustmatch.defaults.callback(jq, label);
-       //var msg = jq.selector + " " + label + " failure";
-       //try { console.log(msg); } catch (ignore) {}
       }
     }
     return jq;
