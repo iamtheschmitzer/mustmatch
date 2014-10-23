@@ -1,5 +1,5 @@
-Eliminate jQuery Selector Errors - The jQuery Mustmatch Plugin 
-==============================================================
+Eliminate jQuery Selector Errors
+================================
 
 Your jQuery code isn't working how you expected:  
 
