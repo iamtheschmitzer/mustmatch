@@ -6,16 +6,11 @@
   // and optional failure callback
   var must = function(jq, isbad, label, cb) {
     if (isbad(jq.length)) {
-      if (cb) {
-        if (jQuery.isFunction(cb)) {
-          cb(jq.selector, jq);
-        } else {
-          // Call default callback
-          $.mustmatch.defaults.callback(jq, cb);
-        }
+      if (cb && jQuery.isFunction(cb)) {
+        cb(jq, label);
       } else {
-       // Call default callback
-       $.mustmatch.defaults.callback(jq, label);
+        // Callback not provided, or not a function, call default callback
+        $.mustmatch.defaults.callback(jq, label);
       }
     }
     return jq;
