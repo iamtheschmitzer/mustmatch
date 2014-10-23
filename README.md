@@ -1,7 +1,22 @@
-jQuery Mustmatch Plugin
-=======================
+Eliminate jQuery Selector Errors - The jQuery Mustmatch Plugin 
+==============================================================
 
-jquery plugin to detect errors in matching jQuery selectors in a minimal library.  Two validations are available:
+Your jQuery code isn't working how you expected:  
+
+```
+$('.something').css('color', 'blue');
+```
+
+It could be that selectors aren't matching what you expect.  It would be nice to eliminate that as a source of the problem right away....
+
+The jQuery Mustmatch Plugin 
+===========================
+
+Change the above code to validate that it matched:
+
+```
+$('.something').mustmatch().css('color', 'blue');
+```
 
 Matching at Least One DOM Node
 ==============================
