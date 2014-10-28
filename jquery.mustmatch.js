@@ -1,7 +1,7 @@
-/*jslint white: false */
+/*jslint sloppy: true, white: true */
 /*global $, jQuery, console */
 // Immediate method has named parameter - will not conflict
-(function($){
+(function ($) {
   // The implementation - pass the jQuery object, the test for badness, label,
   // and optional failure callback
   var must = function(jq, isbad, label, cb) {
