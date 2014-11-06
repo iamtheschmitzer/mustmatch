@@ -10,7 +10,7 @@
         cb(jq, label);
       } else {
         // Callback not provided, or not a function, call default callback
-        $.mustmatch.defaults.callback(jq, label);
+        $.fn.mustmatch.defaults.callback(jq, label);
       }
     }
     return jq;
@@ -27,9 +27,11 @@
   };
 
   // Default callback function logs warning
-  $.fn.mustmatch.callback = function(jq, label) {
-    var msg = jq.selector + " " + label + " failure";
-    // Log a warning, ignore if throws exception (conosle not defined)
-    try { console.warn(msg); } catch (ignore) {}
+  $.fn.mustmatch.defaults = { 
+    callback:  function(jq, label) {
+      var msg = jq.selector + " " + label + " failure";
+      // Log a warning, ignore if throws exception (conosle not defined)
+      try { console.warn(msg); } catch (ignore) {}
+    }
   };
 }(jQuery));

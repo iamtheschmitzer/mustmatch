@@ -54,16 +54,16 @@ The .mm() and .mi() methods accept a callback to handle failure:
 
 ```
 $("#user-name").mi(function() {
-  console.log("User name not found");
+  alert("User name not found");
 });
 ```
 
-This can be passed in with each mustmatch and mustidentify call.  If no callback is specified, the default callback, $.fn.mustmatch.callback() is invoked.
+This can be passed in with each mustmatch and mustidentify call.  A callback accepts two parameters, the jQuery object, and the label of the failure (mustmatch or mustidentify).
 
-The default handler logs a warning to the console.  Set the variable $.fn.mustmatch.callback to modify the default behavior:
+If no callback is specified, the default callback, $.fn.mustmatch.defaults.callback() is invoked.  This default handler logs a warning to the console.  Set the variable $.fn.mustmatch.defaults.callback to modify the default behavior:
 
 ```
-$.fn.mustmatch.callback = function(jq, label) {
+$.fn.mustmatch.defaults.callback = function(jq, label) {
   alert(label + " failure searching for " + jq.selector);
 };
 ```
