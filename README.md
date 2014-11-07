@@ -1,5 +1,5 @@
-Eliminate jQuery Selector Errors
-================================
+Mustmatch - jQuery Inline Assertions
+====================================
 
 Your jQuery code isn't working how you expected:  
 
@@ -9,14 +9,13 @@ $('.something').css('color', 'blue');
 
 It could be that selectors aren't matching what you expect.  It would be nice to eliminate that as a source of the problem right away....
 
-The jQuery Mustmatch Plugin 
-===========================
-
 Change the above code to validate that it matched:
 
 ```
 $('.something').mustmatch().css('color', 'blue');
 ```
+
+And if a match is not found, mustmatch will log a warning to your console.
 
 Matching at Least One DOM Node
 ==============================
